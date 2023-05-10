@@ -5,8 +5,9 @@ Tool: Jmeter
 Application: www.sephora.com
 
 Scenario:
-|-|-|-|
+
 |Transaction Description and Sequence	| Probability | Comment |
+| ----------- | ----------- | ----------- |
 | Home Page	| 100	| |
 Open Random Category from “Fragrance” Menu	25	100	
 Open Random Category from “Tools & Brushes” Menu	25		
