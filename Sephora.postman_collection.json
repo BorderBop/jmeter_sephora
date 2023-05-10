@@ -1,0 +1,225 @@
+{
+	"info": {
+		"_postman_id": "34f4918f-eda0-433c-9e0b-de3150170efe",
+		"name": "Sephora",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17478412"
+	},
+	"item": [
+		{
+			"name": "Get Fragrance Categories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.sephora.com/api/catalog/categories/cat160006",
+					"protocol": "https",
+					"host": [
+						"www",
+						"sephora",
+						"com"
+					],
+					"path": [
+						"api",
+						"catalog",
+						"categories",
+						"cat160006"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Tools & Brushes Categories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.sephora.com/api/catalog/categories/cat130042",
+					"protocol": "https",
+					"host": [
+						"www",
+						"sephora",
+						"com"
+					],
+					"path": [
+						"api",
+						"catalog",
+						"categories",
+						"cat130042"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search by Keyword",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.sephora.com/api/catalog/search?type=keyword&content=true&includeRegionsMap=true&targetSearchEngine=nlp&countryCode=US&q={{keyword}}&loc=en-US&ch=rwd&constructorSessionID=1&constructorClientID=fb719329-acba-481e-b5f3-4eb4fa743dc1",
+					"protocol": "https",
+					"host": [
+						"www",
+						"sephora",
+						"com"
+					],
+					"path": [
+						"api",
+						"catalog",
+						"search"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "keyword"
+						},
+						{
+							"key": "content",
+							"value": "true"
+						},
+						{
+							"key": "includeRegionsMap",
+							"value": "true"
+						},
+						{
+							"key": "targetSearchEngine",
+							"value": "nlp"
+						},
+						{
+							"key": "countryCode",
+							"value": "US"
+						},
+						{
+							"key": "q",
+							"value": "{{keyword}}"
+						},
+						{
+							"key": "loc",
+							"value": "en-US"
+						},
+						{
+							"key": "ch",
+							"value": "rwd"
+						},
+						{
+							"key": "constructorSessionID",
+							"value": "1"
+						},
+						{
+							"key": "constructorClientID",
+							"value": "fb719329-acba-481e-b5f3-4eb4fa743dc1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Open Random Product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.sephora.com/api2/catalog/products/{{product-id}}?addCurrentSkuToProductChildSkus=true&includeRegionsMap=true&showContent=true&includeConfigurableSku=true&countryCode=US&removePersonalizedData=true&includeReviewFilters=true&includeReviewImages=true",
+					"protocol": "https",
+					"host": [
+						"www",
+						"sephora",
+						"com"
+					],
+					"path": [
+						"api2",
+						"catalog",
+						"products",
+						"{{product-id}}"
+					],
+					"query": [
+						{
+							"key": "addCurrentSkuToProductChildSkus",
+							"value": "true"
+						},
+						{
+							"key": "includeRegionsMap",
+							"value": "true"
+						},
+						{
+							"key": "showContent",
+							"value": "true"
+						},
+						{
+							"key": "includeConfigurableSku",
+							"value": "true"
+						},
+						{
+							"key": "countryCode",
+							"value": "US"
+						},
+						{
+							"key": "removePersonalizedData",
+							"value": "true"
+						},
+						{
+							"key": "includeReviewFilters",
+							"value": "true"
+						},
+						{
+							"key": "includeReviewImages",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Product to Cart",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Referer",
+						"value": "https://www.sephora.com/product/winter-perfume-sampler-set-P501286?skuId=2616571&icid2=products grid:p501286:product",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"orderId\": \"current\",\r\n    \"skuList\": [\r\n        {\r\n            \"isAcceptTerms\": false,\r\n            \"qty\": 1,\r\n            \"replenishmentSelected\": false,\r\n            \"replenishmentFrequency\": \"\",\r\n            \"skuId\": \"2616571\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://www.sephora.com/api/shopping-cart/basket/items",
+					"protocol": "https",
+					"host": [
+						"www",
+						"sephora",
+						"com"
+					],
+					"path": [
+						"api",
+						"shopping-cart",
+						"basket",
+						"items"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "keyword",
+			"value": "Mini Perfume Sampler Set"
+		},
+		{
+			"key": "product-id",
+			"value": "P501286"
+		}
+	]
+}
