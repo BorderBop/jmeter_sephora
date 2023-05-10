@@ -1,9 +1,3 @@
-<style>
-  body {
-    background-color: black;
-    color: white;
-  }
-</style>
 # jmeter_sephora
 Test script development
 
