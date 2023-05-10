@@ -1,3 +1,9 @@
+<style>
+  body {
+    background-color: black;
+    color: white;
+  }
+</style>
 # jmeter_sephora
 Test script development
 
@@ -34,6 +40,7 @@ Application: www.sephora.com
 
 ""User Browser Statistics:
 | Browser |	Probability, % |
+| ----------- | ----------- |
 | IE6	 | 25 |
 | IE7 |	5 |
 | IE8 |	10 |
